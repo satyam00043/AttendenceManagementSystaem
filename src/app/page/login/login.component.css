@@ -1,0 +1,81 @@
+/* login.component.css */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background: linear-gradient(to right, #bad8e7, #68adf2);
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2{
+    color: rgb(0, 0, 0);
+    justify-content:space-between;
+    text-align: center;
+    size: 50px;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-seri;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    
+    margin-right: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: rgb(7, 105, 41);
+    color: #f9f9f9;
+  }
+  
+  .forgot-password {
+    margin-top: 10px;
+  }
+  
+  .forgot-password a {
+    color: #060809;
+    text-decoration: none;
+  }
+  
+  .create-account {
+    margin-top: 20px;
+  }
+  
+  .create-account a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .create-account a:hover {
+    text-decoration: underline;
+  }
+  

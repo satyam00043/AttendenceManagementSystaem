@@ -1,0 +1,34 @@
+/* navbar.component.css */
+.navbar {
+    background-color: #0aa8dc; /* Light Blue Background Color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px;
+  }
+  
+  .logo img {
+    height: 50px; /* Set your logo height */
+  }
+  
+  .nav-links a {
+    color: #ffffff; /* White Text Color */
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .signup-button {
+    background-color: #ffffff; /* White Background Color */
+    color: #000000; /* Light Blue Text Color */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-button:hover {
+    background-color: rgb(43, 46, 233); 
+    color:white/* Light Sky Blue Hover Color */
+  }
+  
