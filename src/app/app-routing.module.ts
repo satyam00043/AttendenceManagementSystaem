@@ -4,6 +4,7 @@ import { LoginComponent } from './page/login/login.component';
 import { SignupComponent } from './page/signup/signup.component';
 import { Login2 } from './page/login/login2';
 import { HomeComponent } from './page/home/home.component';
+import { RouterGuardService } from './services/router-guard.service';
 
 const routes: Routes = [
 
@@ -14,6 +15,9 @@ const routes: Routes = [
   {
     path:'signup',
     component:SignupComponent
+  },{
+    path:'article',loadChildren:()=>import('./admin/admin.module').then(m=>m.AdminModule),
+    canActivate:[RouterGuardService]
   },
   {
     path:'loginas',

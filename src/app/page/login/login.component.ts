@@ -22,7 +22,7 @@ password: any;
 
   ngOnInit(): void {
     this.loginForm=this.formBuilder.group({
-      email:[null,[Validators.required,Validators.pattern(GlobalConstants.enailRegex)]],
+      email:[null,[Validators.required,Validators.pattern(GlobalConstants.emailRegex)]],
       password:[null,[Validators.required]]
     })
       
@@ -48,6 +48,7 @@ password: any;
       else{
         this.responseMessage=GlobalConstants.genericError;
       }
+      this.snackbarService.openSnackBar(this.responseMessage)
     })
   }
 onBack(){
@@ -62,7 +63,8 @@ loginForm:any=FormGroup;
 responseMessage:any;
 
 
-constructor(private formBuilder:FormBuilder,private router:Router,
+constructor(private formBuilder:FormBuilder,
+  private router:Router,
   private appuserService:AppUserService,
   private ngxService:NgxUiLoaderService,
   private snackbarService:SnackbarService,

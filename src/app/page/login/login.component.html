@@ -1,6 +1,9 @@
 <!-- login.component.html -->
 <!-- <div class="login-container">
     <h2>Login</h2>
+    <div class="logo">
+      <mat-icon>lock</mat-icon>
+    </div>
     <form>
       <div class="form-group">
         <label for="username">Username:</label>
@@ -18,23 +21,77 @@
         <p>Don't have an account? <a (click)="navigateToSignup()">Create New Account</a></p>
       </div>
     </form>
+  </div> -->
+<!-- 
+
+
+   <div class="login-container">
+    <h2>Login</h2>
+    <div class="logo">
+      <mat-icon>lock</mat-icon>
+    </div>
+    <form>
+      <mat-form-field appearance="outline" fxFlex [color]="themeService.getTheme()">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required>
+      </mat-form-field>
+      <mat-form-field class="form-group" >
+        <label for="username">Username:</label>
+        <input matInput type="text" id="username" placeholder="Username" [(ngModel)]="username" name="username" required>
+      </mat-form-field>
+  
+      <mat-form-field class="form-group">
+        <label for="password">Password:</label>
+        <input matInput type="password" id="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" (click)="login()">Login</button>
+  
+      <div class="forgot-password">
+        <a href="#">Forgotten Password?</a>
+      </div>
+  
+      <div class="create-account">
+        <p>Don't have an account? <a (click)="navigateToSignup()">Create New Account</a></p>
+      </div>
+    </form>
   </div>
-   -->
-   <!-- login.component.html -->
+  
+    login.component.ht
+
+    mat---
+ <body>
+      
+   
 <div class="login-container">
-  <h2>Login</h2>
+  
+  <div class="logo">
+    <mat-icon>lock</mat-icon>
+  
+  </div>
   <form>
-    <mat-form-field class="form-group">
-      <label for="username">Username:</label>
-      <input matInput type="text" id="username" placeholder="Username" [(ngModel)]="username" name="username" required>
+    <div fxFlex fxLayout="column">
+    <mat-form-field appearance="outline" fxFlex [color]="themeService.getTheme()">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" required>
+      <mat-error *ngIf="loginForm.controls.email.touched && loginForm.controls.email.invalid"> 
+        <span *ngIf="loginForm.controls.email.errors.required"> This Field is required. </span>
+        <span *ngIf="loginForm.controls.email.errors.pattern"> This field is invalid. </span>
+      </mat-error>
+      
     </mat-form-field>
-
-    <mat-form-field class="form-group">
-      <label for="password">Password:</label>
-      <input matInput type="password" id="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+    <mat-form-field appearance="outline" fxFlex [color]="themeService.getTheme()">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="Password" required>
+      <mat-error *ngIf="loginForm.controls.Password.touched && loginForm.controls.Password.invalid"> 
+        <span *ngIf="loginForm.controls.Password.errors.required">This Field is required</span>
+       
+      </mat-error>
+      
     </mat-form-field>
-
-    <button mat-raised-button color="primary" (click)="login()">Login</button>
+  
+    
+    <button mat-raised-button [disabled]="!(loginForm.valid && loginForm.dirty)" [color]="themeService.getTheme()" (click)="handleSubmit()">Login</button>
 
     <div class="forgot-password">
       <a href="#">Forgotten Password?</a>
@@ -43,5 +100,54 @@
     <div class="create-account">
       <p>Don't have an account? <a (click)="navigateToSignup()">Create New Account</a></p>
     </div>
+  </div>
   </form>
 </div>
+</body>
+
+-->
+<body>
+  <div class="login-container">
+    <div class="logo">
+      
+      <mat-icon>lock</mat-icon>
+    
+    </div>
+
+    <div  style="text-align: center ! important; margin-bottom: 5px;">LOGIN</div>
+    <form [formGroup]="loginForm">
+    <div fxFlex fxLayout="column">
+      <mat-form-field appearance="outline" fxFlex [color]="themeService.getTheme()">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required>
+        <mat-error *ngIf="loginForm.get('email').touched && loginForm.get('email').hasError('required')">
+          This field is required.
+        </mat-error>
+        <mat-error *ngIf="loginForm.get('email').touched && loginForm.get('email').hasError('pattern')">
+          This field is invalid.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFlex [color]="themeService.getTheme()">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" required>
+        <mat-error *ngIf="loginForm.get('password').touched && loginForm.get('password').hasError('required')">
+          This field is required.
+        </mat-error>
+        
+      </mat-form-field>
+      <button mat-raised-button [disabled]="!(loginForm.valid && loginForm.dirty)" [color]="themeService.getTheme()"  (click)="handleSubmit()"> LOGIN </button>
+      
+      
+
+    </div></form>
+    <div class="home_link" style="text-align: center; margin-top: 5px;">
+      <span (click)="onBack()" >
+      <span style="color: blue;text-align: center; cursor: pointer;">back</span></span>
+    </div>
+
+
+
+
+  </div>
+</body>
