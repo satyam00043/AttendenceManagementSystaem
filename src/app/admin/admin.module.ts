@@ -7,6 +7,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { HelpDetailsComponent } from './help-details/help-details.component';
 import { ConfirmationComponent } from './dialog/confirmation/confirmation.component';
 import { MaterialModule } from '../shared/material-module';
+import { ManageUsersComponent } from './manage-users/manage-users.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { MaterialModule } from '../shared/material-module';
     DashboardComponent,
     LayoutComponent,
     HelpDetailsComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    ManageUsersComponent,
+    UserComponent
   ],
   imports: [
     CommonModule,

@@ -20,6 +20,9 @@ export class AppUserService {
       headers:new HttpHeaders().set('Content-Type',"application/json")
     })
   }
+  getAppuser(){
+    return this.httpClient.get(this.url+"/appuser/getAppuser");
+  }
   getAllAppuser(){
     return this.httpClient.get(this.url+"/appuser/getAllAppuser");
   }

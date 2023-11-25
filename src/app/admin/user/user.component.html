@@ -1,0 +1,19 @@
+
+  
+  <div *ngIf="users" class="dashboard-container">
+    <mat-card class="user-card">
+      <!-- User Photo Section -->
+      <div class="avtar">
+        <img class="avtar" src="{{ users.photo }}" alt="User Photo" class="user-photo">
+      </div>
+      
+      <!-- User Details Section -->
+      <div class="user-details">
+        <p>ID: {{ users.id }}</p>
+    <p>Name: {{ users.name }}</p>
+    <p>Email: {{ users.email }}</p>
+    <p>Status: {{ users.status }}</p>
+      </div>
+    </mat-card>
+  </div>
+  

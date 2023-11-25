@@ -1,0 +1,38 @@
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    
+  ; /* Adjust the height as needed */
+  }
+  
+  .user-card {
+    width: 400px; /* Adjust the max-width as needed */
+    background-color: #d49e9e; /* Bluish-white background color */
+    text-align: left;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+  }
+  
+  .user-photo-container {
+    margin-bottom: 16px;
+
+  }
+   .avtar {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    background-color: rgb(255, 235, 235); 
+    margin-bottom: 10px; 
+    align-items: middle;
+  }
+  
+  .user-photo {
+    width: 100px; /* Adjust the width of the user photo */
+    height: 100px; /* Adjust the height of the user photo */
+    border-radius: 50%; /* Make it a circle */
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+  

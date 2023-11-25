@@ -1,6 +1,6 @@
 .login-container {
    
-    margin: auto;
+    margin-top: 10px;
     padding: 20px;
     background: linear-gradient(to right, #00aaff, #0055aa);
     border-radius: 10px;
@@ -19,10 +19,10 @@
     text-shadow: #0055aa;
   }
   h2{
-    margin-top: auto;
+   
     text-align: center;
     text-transform: capitalize;
-    margin-bottom: auto;
+    
   }
  .first {
   display: flex;
@@ -36,6 +36,9 @@
   -moz-box-align: center;
   align-content: center;
   size: 70px;
+}
+.second{
+  margin-top: 10px;
 }
 
   button {
