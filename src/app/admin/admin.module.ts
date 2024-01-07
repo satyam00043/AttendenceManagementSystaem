@@ -9,6 +9,7 @@ import { ConfirmationComponent } from './dialog/confirmation/confirmation.compon
 import { MaterialModule } from '../shared/material-module';
 import { ManageUsersComponent } from './manage-users/manage-users.component';
 import { UserComponent } from './user/user.component';
+import { ButtonComponent } from './button/button.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { UserComponent } from './user/user.component';
     HelpDetailsComponent,
     ConfirmationComponent,
     ManageUsersComponent,
-    UserComponent
+    UserComponent,
+    ButtonComponent
   ],
   imports: [
     CommonModule,

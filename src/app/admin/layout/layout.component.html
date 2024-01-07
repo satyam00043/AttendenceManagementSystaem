@@ -44,6 +44,10 @@
           <mat-icon>group</mat-icon>
           <span>User</span>
           </button>
+          <button mat-button class="menu-button" [color]="themeService.getTheme()" routerLinkActive="active" routerLink='/article/button' >
+            <mat-icon>all_inclusive</mat-icon>
+            <span>buttons</span>
+            </button>
 
         
         <mat-divider class="custom-divider"></mat-divider>
@@ -57,6 +61,7 @@
     <mat-sidenav-content style="background:radial-gradient(red,#332042);">
       <div class="content mat-elevation-z8" style="background-color: azure;" >
       <router-outlet></router-outlet>
+
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>

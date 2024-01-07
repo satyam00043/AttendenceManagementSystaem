@@ -6,6 +6,7 @@ import { RouterGuardService } from '../services/router-guard.service';
 import { HelpDetailsComponent } from './help-details/help-details.component';
 import { ManageUsersComponent } from './manage-users/manage-users.component';
 import { UserComponent } from './user/user.component';
+import { ButtonComponent } from './button/button.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,9 @@ const routes: Routes = [
       },{
         path:'managr',component:ManageUsersComponent,canActivate:[RouterGuardService]
       },
+      {
+        path:'button',component:ButtonComponent,canActivate:[RouterGuardService]
+      }
     ]
   }
 ];

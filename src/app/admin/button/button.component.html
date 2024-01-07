@@ -1,0 +1,12 @@
+<div class="circular-container">
+    <button *ngFor="let button of buttons" (click)="openButton(button)" [ngClass]="{ 'open': button.isOpen }">
+      {{ button.label }}
+    </button>
+  </div>
+  <div class="home-container">
+    <div class="wall" [style.background-color]="wallColor"></div>
+  
+    <button class="door" (click)="changeWallColor('brown')">Door</button>
+    <button class="window" (click)="changeWallColor('blue')">Window</button>
+  </div>
+  

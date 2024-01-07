@@ -17,6 +17,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgxUiLoaderConfig, NgxUiLoaderModule, PB_DIRECTION, SPINNER } from 'ngx-ui-loader';
 import { HomeComponent } from './page/home/home.component';
 import { TokenInterceptor } from './services/token.interceptor';
+import { ColorComponent } from './page/color/color.component';
 
 
 
@@ -46,6 +47,7 @@ const ngxUiLoaderConfig:NgxUiLoaderConfig={
     TooltipPipe,
     Login2,
     HomeComponent,
+    ColorComponent,
    
   ],
   imports: [

@@ -1,0 +1,15 @@
+
+  <div class="lights-container">
+    <div *ngFor="let light of lights; let i = index" class="light" [class.active]="light.active" (click)="toggleLight(i)">
+      Light {{i + 1}}
+    </div>
+  </div>
+  
+  <div class="buttons-container">
+    <button (click)="changeColor(0)">Change Color 1</button>
+    <button (click)="changeColor(1)">Change Color 2</button>
+    <button (click)="changeColor(2)">Change Color 3</button>
+    <button (click)="changeColor(3)">Change Color 4</button>
+  </div>
+  
+  

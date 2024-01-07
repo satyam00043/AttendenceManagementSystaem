@@ -1,0 +1,70 @@
+.circular-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  
+  button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  button.open {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  
+  button:nth-child(1) { transform: rotate(0deg) translate(100px) rotate(0deg); }
+  button:nth-child(2) { transform: rotate(51.42deg) translate(100px) rotate(-51.42deg); }
+  button:nth-child(3) { transform: rotate(102.85deg) translate(100px) rotate(-102.85deg); }
+  button:nth-child(4) { transform: rotate(154.27deg) translate(100px) rotate(-154.27deg); }
+  button:nth-child(5) { transform: rotate(205.7deg) translate(100px) rotate(-205.7deg); }
+  button:nth-child(6) { transform: rotate(257.13deg) translate(100px) rotate(-257.13deg); }
+  button:nth-child(7) { transform: rotate(308.56deg) translate(100px) rotate(-308.56deg); }
+  .home-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+  }
+  
+  .wall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0; /* Initial wall color */
+  }
+  
+  button {
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .door {
+    bottom: 0;
+    left: 50px;
+    background-color: #8b4513; /* Brown color for the door */
+  }
+  
+  .window {
+    top: 50px;
+    right: 50px;
+    background-color: #4682b4; /* Blue color for the window */
+  }
+  
